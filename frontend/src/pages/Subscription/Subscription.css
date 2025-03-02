@@ -46,17 +46,17 @@ body {
 
 .subscription-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2.5rem;
-  padding: 6rem 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Increased min-width to 350px for larger cards */
+  gap: 3rem; /* Increased gap between the cards */
+  padding: 8rem 3rem; /* Increased padding for more space around the container */
   min-height: 100vh;
-  margin-top: 100px;
+  margin-top: 150px; /* Increased space from the top */
   perspective: 1000px;
 }
 
 .subscription-card {
   position: relative;
-  height: var(--card-height);
+  height: auto; /* Adjusted to auto so the cards resize dynamically */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 24px;
@@ -68,6 +68,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+
 
 .subscription-card:hover {
   transform: translateY(-15px) rotateX(2deg);
